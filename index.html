@@ -17,7 +17,7 @@
 		}
 
 		// You have to put the conditional statement inside a function and then call that function on each button click
-		// color palette high : #4CAF50 low : 
+		// color palette high : #4CAF50 low : #f44336
 		function colorChange(){
             if (num < 0) {
                 document.getElementById("number").style.color = "#f44336";
@@ -52,7 +52,7 @@
 			font-size: 18px;
 			color: #000;
 			border: none;
-			padding: 10px 20px;
+			margin: 10px 20px;
 			font-family: "Josefin Sans", sans serif;
 			background: none;
 			outline: none;
@@ -82,9 +82,8 @@
 		#number {
 			font-size: 40px;
 			transition: 0.3s;
-			padding: 0px;
-			margin: 55px 0px 20px 0px;
-			box-sizing: 10px;
+			margin: 55px auto 20px;
+			display: table;
 			text-align: center;
 		}
 
