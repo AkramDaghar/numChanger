@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400&display=swap" rel="stylesheet">
+	<script type="text/javascript">
+		let num = 0;
+		function higher() {
+			num ++;
+			document.getElementById("number").innerHTML = num;
+			colorChange();
+		}
+		function lower() {
+			num --;
+			document.getElementById("number").innerHTML = num;
+			colorChange();
+		}
+
+		// You have to put the conditional statement inside a function and then call that function on each button click
+		// color palette high : #4CAF50 low : 
+		function colorChange(){
+            if (num < 0) {
+                document.getElementById("number").style.color = "#f44336";
+                document.getElementById("counter").style.borderColor = "#f44336";
+            } else if (num > 0) {
+                document.getElementById("number").style.color = "#4CAF50";
+				document.getElementById("counter").style.borderColor = "#4CAF50";
+
+            } else if (num === 0) {
+            	document.getElementById("number").style.color = "black";
+				document.getElementById("counter").style.borderColor = "black";
+            }
+        }
+
+	</script>
+
+	<style type="text/css">
+		#counter {
+            position: absolute;
+            width: 300px;
+            height: 235px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /*important to center element right in the middle of a page*/
+            text-align: center;
+            font-family: "Josefin Sans", sans serif;
+            border: black solid 1px;
+            transition: 0.3s;
+		}
+
+		.btn_high, .btn_low {
+			font-size: 18px;
+			color: #000;
+			border: none;
+			padding: 10px 20px;
+			font-family: "Josefin Sans", sans serif;
+			background: none;
+			outline: none;
+			transition: 0.3s;
+		}
+
+		.btn_high:hover {
+			color: #4CAF50;
+		}
+
+		.btn_high:active {
+			color: #8BC34A;
+		}
+
+		.btn_low:hover {
+			color: #f44336;
+		}
+
+		.btn_low:active {
+			color: #E91E63;
+		}
+
+		/*
+		(when you hover besides the number the hover effect works)
+		*/
+		#number {
+			width: 20vw;
+			font-size: 40px;
+			transition: 0.3s;
+			padding: 0px;
+			margin: 55px 0px 20px 0px;
+			box-sizing: 10px;
+			text-align: center;
+		}
+
+		#number:hover {
+			color: #607D8B;
+		}
+	</style>
+</head>
+<body>
+	<div id="counter">
+	    <div id="number">0</div>
+	    <button onmousedown="higher()" class="btn_high">Higher</button>
+	    <button onclick="lower()" class="btn_low">Lower</button>
+	</div>
+</body>
+</html>
