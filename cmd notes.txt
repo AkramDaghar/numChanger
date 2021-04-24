@@ -1,0 +1,20 @@
+cmd notes:
+
+>nslookup myip.opendns.com resolver1.opendns.com
+find out your ip
+
+>curl ipinfo.io/197.2.2.5
+find ip exact geographic location
+
+>рing [192.31.80.30] -t -l 65500
+>ping -t -l 192.31.80.30 3620000
+ddoss
+
+https://iplogger.org/logger/
+website to get ips from people who enter links
+
+
+https://mxtoolbox.com/EmailHeaders.aspx
+get email sender's ip
+
+
